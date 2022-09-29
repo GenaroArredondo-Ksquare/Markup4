@@ -1,0 +1,95 @@
+*{
+    font-family:'Roboto';
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.chat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: 
+    'msg-msg-1 msg-msg-1 .'
+    '. msg-msg-2 msg-msg-2'
+    '. . .' ;
+}
+
+.msg {
+    height: 100px;
+    width: 550px;
+}
+
+.msg-1 {
+    grid-area: msg-msg-1;
+    display: flex;
+    flex-direction: row;
+}
+
+.msg-2 {
+    grid-area: msg-msg-2;
+    display: flex;
+}
+
+.bioPic {
+    border-radius: 50%;
+    display: flex;
+    background-image: url(http://pm1.narvii.com/7065/89685f7d40eeef93d17543dfb0bda25831e94839r1-800-940v2_uhq.jpg);
+    background-size: 3em 3em;
+    margin-top: 3em;
+    width: 3em;
+    height: 3em;
+}
+
+.text {
+    background-color: black;
+    height: 85px;
+    width: 300px;
+    margin-top: 3em;
+    border-radius: 1%;
+    display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-areas: 
+    "txt txt txt ."
+    ". . seen bi"
+    ; 
+}
+
+.text-1 {
+    margin-left: 1em;
+    background-color: rgb(208, 250, 208);   
+}
+
+.text-2 {
+    margin-left: 12em;
+    background-color: rgb(228, 226, 226);
+}
+
+.txt {
+    grid-area: txt;
+    padding: 2px;
+    margin-left: 1em;
+    font-weight: bold;
+}
+
+.seen {
+    grid-area: seen;
+    margin-top: -1em;
+    margin-left: 1em;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    justify-content:left;
+}
+
+.bi {
+    grid-area: bi;
+    color: gray;
+    margin-top: -0.85em;
+    margin-left: -2em;
+}
+
